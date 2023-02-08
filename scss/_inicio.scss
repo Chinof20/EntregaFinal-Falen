@@ -1,0 +1,55 @@
+/* parte del inicio*/
+#titulo h2{
+    grid-area: titulo;
+    text-align: center;
+    font-size: 4rem;
+    margin: 2rem;
+}
+
+#intro{
+    grid-area: intro;
+    @include dis-flex-col-center;
+    gap: 2rem;
+    margin: 2rem;
+    .ajuste{
+        width: 30rem; 
+    }
+}
+
+.intro-hijo{
+    background-color: $color-principal;
+    @include dis-flex-col-center;
+    padding: 2rem;
+    border-radius: 5%;
+    img{
+        height: 25rem;
+        border-radius: 70%; 
+    }
+    p{
+        font-size: 1.5rem;  
+    } 
+}
+
+
+@media screen and (min-width: $pantalla-md) {
+    .intro-hijo{
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .reverse{
+        flex-direction: row-reverse;
+    } 
+}
+
+@media screen and (min-width: $pantalla-mg){
+    #intro{
+    flex-direction: row;
+        .intro-hijo{
+            flex-direction: column;
+            padding: 2rem;
+        }
+        .reverse{
+           width: 110rem; 
+        }
+    }
+} 

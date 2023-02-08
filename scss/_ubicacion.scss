@@ -1,0 +1,24 @@
+
+/* UBICACION */
+.ubicacion{
+    @include dis-flex-col-center;
+    justify-content: center;
+    padding: 1rem;
+    iframe{
+        height: 40rem;
+        width: 40rem;
+    }
+}
+
+.ubi{
+    font-size: 4rem;
+}
+
+@media screen and (min-width: $pantalla-md) {
+    .ubicacion{
+        iframe{
+            height: 70rem;
+            width: 100rem;
+        }
+    }
+}

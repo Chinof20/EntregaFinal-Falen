@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+} 
+img {
+    max-width: 100%;
+}
+
+/* menu navegacion */
+header {
+    background-color: $color-principal;
+    width: 100%; 
+    z-index: 1;
+} 
+
+h1{
+    text-align: center;
+    color: $color-letra;
+}
+
+h2{
+    font-size: 4rem;
+}
+
+.formato{
+    color: $color-letra;
+    font-size: 2rem;
+}
+.logo{
+    width: 10rem;
+}
+
+#body{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "titulo"
+    "intro"
+    "footer";
+    grid-template-columns: repeat(1,1fr);
+    background-image: url("../img/fondopantalla2023.png");
+}
+
+#header{
+    grid-area: header;
+    @include dis-flex-col-center;
+    justify-content: space-evenly; 
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.forma{
+    @include dis-flex-row-center;
+    gap: 5rem;
+}
+
+
+@media screen and (min-width: $pantalla-g) {
+    #header{
+        flex-direction: row;
+    }
+}
+
+/*Footer*/
+
+#footer{
+    grid-area: footer;
+    @include dis-flex-col-center;
+    strong{
+        font-size: 1.5rem;
+    }
+    .icon{
+        font-size: 3rem;
+    }
+}
+

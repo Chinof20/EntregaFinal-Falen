@@ -1,0 +1,75 @@
+/* PRODUCTOS */
+.card{
+    background-color: $color-principal;
+}
+
+.conteiner-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-items: center;
+}
+
+@media screen and (max-width: $pantalla-md){
+    .conteiner-cards{
+        @include dis-flex-col-center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: $pantalla-g){
+    .conteiner-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.container-opciones{
+    @include dis-flex-row-center;
+    justify-content: center;
+    margin: 1rem;
+    gap: 3rem;
+        label{
+        cursor: pointer;
+        background-color: $color-principal;
+        padding: 6px 10px;
+        border-radius: 20px;
+        border: none;
+        margin-bottom: 2rem;
+        font-size: 2rem; 
+        text-align: center;
+        width: 120%;
+        }
+}
+
+@media screen and (min-width: $pantalla-md) {
+    .container-opciones{
+        label{
+            border-radius: 20px;
+        }
+    }
+}
+
+#arroz,
+#tallarines,
+#platos_especiales,
+#todos{
+     display: none;
+}
+
+.card-arroz,
+.card-fideos,
+.card-pespecial{
+    display: none;
+}
+
+#arroz:checked ~ .conteiner-cards .card-arroz,
+#tallarines:checked ~ .conteiner-cards .card-fideos,
+#platos_especiales:checked ~ .conteiner-cards .card-pespecial{
+    display: flex;
+}
+
+#todos:checked ~ .conteiner-cards .card-arroz,
+#todos:checked ~ .conteiner-cards .card-fideos,
+#todos:checked ~ .conteiner-cards .card-pespecial{
+    display: flex;
+}

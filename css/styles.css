@@ -1,0 +1,382 @@
+/*imports */ /*Colores*/
+/*Media-Resoluciones*/
+/*mixins*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400);
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* menu navegacion */
+header {
+  background-color: #FFB100;
+  width: 100%;
+  z-index: 1;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+.formato {
+  color: white;
+  font-size: 2rem;
+}
+
+.logo {
+  width: 10rem;
+}
+
+#body {
+  display: grid;
+  grid-template-areas: "header" "titulo" "intro" "footer";
+  grid-template-columns: repeat(1, 1fr);
+  background-image: url("../img/fondopantalla2023.png");
+}
+
+#header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.forma {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5rem;
+}
+
+@media screen and (min-width: 992px) {
+  #header {
+    flex-direction: row;
+  }
+}
+/*Footer*/
+#footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#footer strong {
+  font-size: 1.5rem;
+}
+#footer .icon {
+  font-size: 3rem;
+}
+
+/* parte del inicio*/
+#titulo h2 {
+  grid-area: titulo;
+  text-align: center;
+  font-size: 4rem;
+  margin: 2rem;
+}
+
+#intro {
+  grid-area: intro;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem;
+}
+#intro .ajuste {
+  width: 30rem;
+}
+
+.intro-hijo {
+  background-color: #FFB100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 5%;
+}
+.intro-hijo img {
+  height: 25rem;
+  border-radius: 70%;
+}
+.intro-hijo p {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .intro-hijo {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .reverse {
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #intro {
+    flex-direction: row;
+  }
+  #intro .intro-hijo {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  #intro .reverse {
+    width: 110rem;
+  }
+}
+/* PRODUCTOS */
+.card {
+  background-color: #FFB100;
+}
+
+.conteiner-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .conteiner-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 992px) {
+  .conteiner-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.container-opciones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  gap: 3rem;
+}
+.container-opciones label {
+  cursor: pointer;
+  background-color: #FFB100;
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  width: 120%;
+}
+
+@media screen and (min-width: 768px) {
+  .container-opciones label {
+    border-radius: 20px;
+  }
+}
+#arroz,
+#tallarines,
+#platos_especiales,
+#todos {
+  display: none;
+}
+
+.card-arroz,
+.card-fideos,
+.card-pespecial {
+  display: none;
+}
+
+#arroz:checked ~ .conteiner-cards .card-arroz,
+#tallarines:checked ~ .conteiner-cards .card-fideos,
+#platos_especiales:checked ~ .conteiner-cards .card-pespecial {
+  display: flex;
+}
+
+#todos:checked ~ .conteiner-cards .card-arroz,
+#todos:checked ~ .conteiner-cards .card-fideos,
+#todos:checked ~ .conteiner-cards .card-pespecial {
+  display: flex;
+}
+
+/* CONTACTO */
+.titulo {
+  font-size: 4rem;
+  color: black;
+}
+
+form {
+  padding: 5%;
+  max-width: 600px;
+  background-color: #FFB100;
+  margin: 4rem;
+  font-size: 2rem;
+  border-radius: 10%;
+}
+form input {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1rem;
+}
+form textarea {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 10rem;
+  padding: 3px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+#formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#casilla {
+  display: flex;
+  align-items: center;
+}
+#casilla .cuadro {
+  width: 5rem;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  form {
+    padding: 7%;
+  }
+}
+/* SOBRE NOSOTROS */
+.list {
+  list-style: none;
+}
+.list p {
+  text-align: center;
+}
+
+.cursiva {
+  font-style: italic;
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.fondo {
+  background-color: #FFB100;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.fondo a {
+  font-size: 2rem;
+}
+.fondo ul li a {
+  font-size: 2rem;
+  color: black;
+}
+
+.barra {
+  color: black;
+}
+
+.cambio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+.cambio-hijos, .cambio-clientes, .cambio-nosotros {
+  background-color: #FFB100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  width: 100%;
+}
+.cambio-hijos h4, .cambio-clientes h4, .cambio-nosotros h4 {
+  font-size: 2rem;
+}
+.cambio-hijos p, .cambio-clientes p, .cambio-nosotros p {
+  font-size: 1.5rem;
+}
+.cambio-hijos img, .cambio-clientes img, .cambio-nosotros img {
+  height: 25rem;
+  width: 40rem;
+  border-radius: 70%;
+  padding: 1rem;
+}
+
+.cambio-nosotros .list li {
+  font-size: 1.5rem;
+}
+.cambio-nosotros .list li p {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .fondo {
+    gap: 20rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .fondo {
+    gap: 40rem;
+  }
+}
+/* UBICACION */
+.ubicacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.ubicacion iframe {
+  height: 40rem;
+  width: 40rem;
+}
+
+.ubi {
+  font-size: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .ubicacion iframe {
+    height: 70rem;
+    width: 100rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

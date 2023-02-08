@@ -1,0 +1,98 @@
+/* SOBRE NOSOTROS */
+
+.list{
+    list-style: none;
+    p{
+    text-align: center; 
+    }
+}
+
+.cursiva{
+    font-style: italic;
+    padding: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: $color-letra2;
+}
+
+.fondo{
+    background-color: $color-principal;
+    margin-bottom: 1rem;
+    @include dis-flex-row-center;
+    justify-content: center;
+    a{
+    font-size: 2rem; 
+    }
+    gap: 2rem;
+    ul{
+        li{
+            a{
+            font-size: 2rem; 
+            color: $color-letra2;
+            }
+        }
+    }
+}
+
+
+
+.barra{
+    color: $color-letra2;   
+}
+.cambio{
+    @include dis-flex-col-center;
+    gap: 1rem;
+    text-align: center;
+    margin: 2rem;
+}
+
+.cambio-hijos{
+    background-color: $color-principal;
+    @include dis-flex-col-center;
+    justify-content: center;
+    border-radius: 20px;
+    width: 100%;
+    h4{
+        font-size: 2rem; 
+    }
+    p{
+        font-size: 1.5rem;
+    }
+    img{
+        height: 25rem;
+        width: 40rem;
+        border-radius: 70%;
+        padding: 1rem; 
+    }
+}
+
+.cambio-nosotros{
+    @extend .cambio-hijos; 
+    .list{
+        li{
+            font-size: 1.5rem;
+            p{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.cambio-clientes{
+    @extend .cambio-hijos;
+}
+
+
+@media screen and (min-width: $pantalla-md){
+    .fondo{
+        gap: 20rem;
+    }
+}
+
+@media screen and (min-width: $pantalla-g){
+    .fondo{
+        gap: 40rem;
+    }
+}

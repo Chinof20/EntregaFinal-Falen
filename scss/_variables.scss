@@ -1,0 +1,25 @@
+/*Colores*/
+$color-principal: #FFB100;
+$color-letra: white;
+$color-letra2: black;
+
+
+
+/*Media-Resoluciones*/
+$pantalla-md: 768px;
+$pantalla-g: 992px;
+$pantalla-mg: 1024px;
+
+
+/*mixins*/
+@mixin dis-flex-col-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin dis-flex-row-center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
