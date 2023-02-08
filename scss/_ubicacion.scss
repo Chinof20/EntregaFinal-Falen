@@ -8,6 +8,9 @@
         height: 40rem;
         width: 40rem;
     }
+    p{
+        font-size: 2rem;
+    }
 }
 
 .ubi{
@@ -19,6 +22,47 @@
         iframe{
             height: 70rem;
             width: 100rem;
+        }
+    }
+}
+
+@media screen and (max-width: $pantalla-p){
+    .ubicacion{
+        iframe{
+            height: 40rem;
+            width: 20rem;
+        }
+        h2{
+        text-align: center;
+        }
+    }
+}
+
+@media (max-width: $pantalla-px) and (min-width: $pantalla-p){
+    .ubicacion{
+        iframe{
+            height: 40rem;
+            width: 30rem;
+        }
+        h2{
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: $pantalla-g) and (min-width: $pantalla-md){
+    .ubicacion{
+        iframe{
+            height: 40rem;
+            width: 60rem;
+        }
+    }
+}
+@media (max-width: $pantalla-mg) and (min-width: $pantalla-g){
+    .ubicacion{
+        iframe{
+            height: 40rem;
+            width: 70rem;
         }
     }
 }

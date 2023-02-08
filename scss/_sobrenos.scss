@@ -96,3 +96,21 @@ a{
         gap: 40rem;
     }
 }
+
+@media screen and (max-width: $pantalla-p){
+    .modifico{
+        @include dis-flex-col-center;
+        text-align: center;
+    }
+} 
+
+
+@media (max-width: $pantalla-px) and (min-width: $pantalla-p){
+    .fondo{
+        @include dis-flex-col-center;
+    }
+    .modifico{
+        @include dis-flex-col-center;
+        text-align: center;
+    }
+}

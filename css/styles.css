@@ -135,6 +135,7 @@ h2 {
   #intro .intro-hijo {
     flex-direction: column;
     padding: 2rem;
+    height: 40rem;
   }
   #intro .reverse {
     width: 110rem;
@@ -176,7 +177,7 @@ h2 {
 .container-opciones label {
   cursor: pointer;
   background-color: #FFB100;
-  padding: 6px 10px;
+  padding: 1px;
   border-radius: 20px;
   border: none;
   margin-bottom: 2rem;
@@ -185,9 +186,32 @@ h2 {
   width: 120%;
 }
 
-@media screen and (min-width: 768px) {
-  .container-opciones label {
-    border-radius: 20px;
+@media screen and (max-width: 320px) {
+  .container-opciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    width: 50%;
+    row-gap: 0;
+  }
+}
+@media (max-width: 768px) and (min-width: 320px) {
+  .container-opciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    margin: 0 auto;
+    row-gap: 0;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container-opciones {
+    display: flex;
+  }
+  .conteiner-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 #arroz,
@@ -342,7 +366,7 @@ a {
   font-size: 1.5rem;
 }
 .cambio-nosotros .list li p {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -353,6 +377,27 @@ a {
 @media screen and (min-width: 992px) {
   .fondo {
     gap: 40rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .modifico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 444px) and (min-width: 320px) {
+  .fondo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .modifico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 /* UBICACION */
@@ -367,6 +412,9 @@ a {
   height: 40rem;
   width: 40rem;
 }
+.ubicacion p {
+  font-size: 2rem;
+}
 
 .ubi {
   font-size: 4rem;
@@ -376,6 +424,36 @@ a {
   .ubicacion iframe {
     height: 70rem;
     width: 100rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .ubicacion iframe {
+    height: 40rem;
+    width: 20rem;
+  }
+  .ubicacion h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 444px) and (min-width: 320px) {
+  .ubicacion iframe {
+    height: 40rem;
+    width: 30rem;
+  }
+  .ubicacion h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .ubicacion iframe {
+    height: 40rem;
+    width: 60rem;
+  }
+}
+@media (max-width: 1024px) and (min-width: 992px) {
+  .ubicacion iframe {
+    height: 40rem;
+    width: 70rem;
   }
 }
 

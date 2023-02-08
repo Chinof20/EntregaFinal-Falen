@@ -31,7 +31,7 @@
         label{
         cursor: pointer;
         background-color: $color-principal;
-        padding: 6px 10px;
+        padding: 1px;
         border-radius: 20px;
         border: none;
         margin-bottom: 2rem;
@@ -41,14 +41,41 @@
         }
 }
 
-@media screen and (min-width: $pantalla-md) {
+@media screen and (max-width: $pantalla-p){
     .container-opciones{
-        label{
-            border-radius: 20px;
-        }
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+        width: 50%;
+        row-gap: 0;
+    }
+} 
+
+@media (max-width: $pantalla-md) and (min-width: $pantalla-p){
+    .container-opciones{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+        margin: 0 auto;
+        row-gap: 0;
+        width: 50%;
     }
 }
 
+
+
+@media screen and (min-width: $pantalla-g){
+    .container-opciones{
+        display: flex
+    }
+    .conteiner-cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);  
+    }
+}
+
+
+ 
 #arroz,
 #tallarines,
 #platos_especiales,
