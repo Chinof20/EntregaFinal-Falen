@@ -53,16 +53,16 @@
 @media (max-width: $pantalla-g) and (min-width: $pantalla-md){
     .ubicacion{
         iframe{
-            height: 40rem;
-            width: 60rem;
+            height: 90rem;
+            width: 70rem;
         }
     }
 }
 @media (max-width: $pantalla-mg) and (min-width: $pantalla-g){
     .ubicacion{
         iframe{
-            height: 40rem;
-            width: 70rem;
+            height: 100rem;
+            width: 80rem;
         }
     }
 }

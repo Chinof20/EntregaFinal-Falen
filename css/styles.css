@@ -25,15 +25,19 @@ header {
 h1 {
   text-align: center;
   color: white;
+  font-family: "Rubik Vinyl", cursive;
+  font-size: 4rem;
 }
 
 h2 {
   font-size: 4rem;
+  font-family: "Righteous", cursive;
 }
 
 .formato {
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-family: "Orbitron", sans-serif;
 }
 
 .logo {
@@ -117,6 +121,7 @@ h2 {
 }
 .intro-hijo p {
   font-size: 1.5rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -135,10 +140,11 @@ h2 {
   #intro .intro-hijo {
     flex-direction: column;
     padding: 2rem;
-    height: 40rem;
+    height: 100%;
+    width: 100%;
   }
   #intro .reverse {
-    width: 110rem;
+    width: 100%;
   }
 }
 /* PRODUCTOS */
@@ -184,6 +190,7 @@ h2 {
   font-size: 2rem;
   text-align: center;
   width: 120%;
+  font-family: "Orbitron", sans-serif;
 }
 
 @media screen and (max-width: 320px) {
@@ -312,7 +319,8 @@ a {
 
 .fondo {
   background-color: #FFB100;
-  margin-bottom: 1rem;
+  border-radius: 1rem;
+  margin: 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -321,10 +329,12 @@ a {
 }
 .fondo a {
   font-size: 2rem;
+  font-family: "Orbitron", sans-serif;
 }
 .fondo ul li a {
   font-size: 2rem;
   color: black;
+  font-family: "Orbitron", sans-serif;
 }
 
 .barra {
@@ -351,6 +361,7 @@ a {
 }
 .cambio-hijos h4, .cambio-clientes h4, .cambio-nosotros h4 {
   font-size: 2rem;
+  font-family: "Orbitron", sans-serif;
 }
 .cambio-hijos p, .cambio-clientes p, .cambio-nosotros p {
   font-size: 1.5rem;
@@ -369,16 +380,6 @@ a {
   font-size: 1.5rem;
 }
 
-@media screen and (min-width: 768px) {
-  .fondo {
-    gap: 20rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .fondo {
-    gap: 40rem;
-  }
-}
 @media screen and (max-width: 320px) {
   .modifico {
     display: flex;
@@ -388,6 +389,27 @@ a {
   }
 }
 @media (max-width: 444px) and (min-width: 320px) {
+  .modifico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 525px) and (min-width: 444px) {
+  .fondo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .modifico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) and (min-width: 525px) {
   .fondo {
     display: flex;
     flex-direction: column;
@@ -446,14 +468,14 @@ a {
 }
 @media (max-width: 992px) and (min-width: 768px) {
   .ubicacion iframe {
-    height: 40rem;
-    width: 60rem;
+    height: 90rem;
+    width: 70rem;
   }
 }
 @media (max-width: 1024px) and (min-width: 992px) {
   .ubicacion iframe {
-    height: 40rem;
-    width: 70rem;
+    height: 100rem;
+    width: 80rem;
   }
 }
 
